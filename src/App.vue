@@ -3,7 +3,6 @@ import { ref, onMounted, computed, watch } from 'vue';
 
 const todos = ref([])
 const name = ref('')
-const arrayTest = ref(["1", "2", "3"])
 
 const input_content = ref('')
 const input_category = ref(null)
@@ -62,12 +61,6 @@ onMounted(() => {
 <template>
   <main class="app">
     <section class="greeting">
-      <div v-for="num in arrayTest">
-        {{ num }}
-      </div>
-      <button @click="pushArrayTest">Push</button>
-      <button @click="popArrayTest">Pop</button>
-      <button @click="changeArrayTest">Change</button>
       <h2 class="title">
         What's up, <input type="text" placeholder="Name here" v-model="name" />
       </h2>
